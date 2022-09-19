@@ -10,6 +10,7 @@ set(SOURCE_FILES
     console.cpp
     console.h
     main.cpp
+    repo.h
 )
 
 add_executable(cpp_20 ${SOURCE_FILES})

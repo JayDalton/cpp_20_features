@@ -2,7 +2,12 @@
 
 int Console::run()
 {
-    print("Enter input...\n");
+   // std::format
+   // ranges
+   // 
+
+    print("Select area...\n");
+    m_repo.printContentList();
 
     while (auto input = readInput())
     {

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common.h"
+#include "repo.h"
 
 struct Console
 {
@@ -10,7 +11,7 @@ protected:
     std::optional<std::string> readInput();
 
 private:
-   // repo
+   cpp20::Repository m_repo;
 };
 
 
