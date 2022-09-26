@@ -1,6 +1,7 @@
 #include "console.h"
 
 #include "concept01.h"
+#include "variant01.h"
 
 int Console::run()
 {
@@ -12,6 +13,9 @@ int Console::run()
     print("Select area...\n");
     m_repo.printContentList();
 
+   Concept01::call();
+   Variant01::call();
+
     while (auto input = readInput())
     {
         print("Input: {}\n", input.value());
@@ -19,9 +23,6 @@ int Console::run()
       //   {
 
       //   }
-
-      Concept01::call();
-
     }
 
     print("End!\n");
