@@ -4,7 +4,8 @@ int Console::run()
 {
    // std::format
    // ranges
-   // 
+   // concept
+   // variant
 
     print("Select area...\n");
     m_repo.printContentList();
@@ -12,6 +13,10 @@ int Console::run()
     while (auto input = readInput())
     {
         print("Input: {}\n", input.value());
+      //   if (auto fun = m_repo.contains(input.value()))
+      //   {
+
+      //   }
     }
 
     print("End!\n");
