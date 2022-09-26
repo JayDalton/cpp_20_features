@@ -99,3 +99,41 @@ namespace Concept01 {
 
    }
 }
+
+// ############################################################
+
+namespace TypeErasure 
+{
+   struct animal_view
+   {
+      template <typename Speakable>
+      explicit animal_view(const Speakable& speakable) 
+         : object{&speakable}
+         , speak_impl([](const void* obj){ return static_cast<const Speakable*>(obj)->speak(); })
+      {
+
+      }
+
+      void speak() const { speak_impl(object); }
+
+   private:
+      const void* object;
+      void (*speak_impl)(const void*);
+   };
+
+   void do_animal_thing(animal_view animal) { animal.speak(); }
+
+   void call()
+   {
+      struct Cow {
+         void speak() const { print("Mooo\n"); }
+      };
+
+      struct Sheep {
+         void speak() const { print("Baaa\n"); }
+      };
+
+      do_animal_thing(animal_view{Cow{}});
+      do_animal_thing(animal_view{Sheep{}});
+   }
+}

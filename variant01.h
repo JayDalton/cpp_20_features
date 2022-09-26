@@ -68,5 +68,7 @@ namespace Variant01
        {
            print("{} ", i);
        }
+
+      print("\n");
    }
 }

@@ -15,6 +15,7 @@ int Console::run()
 
    Concept01::call();
    Variant01::call();
+   TypeErasure::call();
 
     while (auto input = readInput())
     {
