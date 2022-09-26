@@ -1,5 +1,7 @@
 #include "console.h"
 
+#include "concept01.h"
+
 int Console::run()
 {
    // std::format
@@ -17,6 +19,9 @@ int Console::run()
       //   {
 
       //   }
+
+      Concept01::call();
+
     }
 
     print("End!\n");
