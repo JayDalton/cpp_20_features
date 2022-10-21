@@ -9,7 +9,7 @@ namespace Coroutine01 {
         struct promise_type 
         {
             ReturnType get_return_object() { return {}; }
-            std::suspend_always initial_suspend() { return {}; }
+            std::suspend_never initial_suspend() { return {}; }
 
             void return_void() { }
             void unhandled_exception() { };
@@ -21,7 +21,7 @@ namespace Coroutine01 {
 
     ReturnType hello_coroutine() 
     {
-        print("\nHello from generator!\n");
+        print("Hello from generator!\n");
         co_return;
     }
 
