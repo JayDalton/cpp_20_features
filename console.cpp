@@ -2,6 +2,7 @@
 
 #include "concept01.h"
 #include "variant01.h"
+#include "coroutine01.h"
 
 int Console::run()
 {
@@ -16,6 +17,7 @@ int Console::run()
    Concept01::call();
    Variant01::call();
    TypeErasure::call();
+   Coroutine01::call();
 
     while (auto input = readInput())
     {
