@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <chrono>
+#include <coroutine>
 #include <iostream>
 #include <iterator>
 #include <format>
