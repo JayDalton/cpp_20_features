@@ -1,6 +1,7 @@
 #include "console.h"
 
 #include "concept01.h"
+#include "concept02.h"
 #include "variant01.h"
 #include "coroutine01.h"
 
@@ -15,6 +16,7 @@ int Console::run()
     m_repo.printContentList();
 
    Concept01::call();
+   Concept02::call();
    Variant01::call();
    TypeErasure::call();
    Coroutine01::call();
