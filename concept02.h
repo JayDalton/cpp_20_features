@@ -129,13 +129,15 @@ namespace Concept02 {
       }
    private:
       using ListType = std::tuple<std::vector<TDevices>...>;
+
       auto update_device(auto& device_list) -> void {
          for (auto& device : device_list) {
             device.update();
          }
       }
 
-      [[nodiscard]] static auto get_devices() -> ListType {
+      [[nodiscard]] 
+      static auto get_devices() -> ListType {
          return std::tuple{TDevices::find_in_env()...};
       }
 
