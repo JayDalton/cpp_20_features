@@ -4,6 +4,7 @@
 #include "concept02.h"
 #include "variant01.h"
 #include "variant02.h"
+#include "variant03.h"
 #include "coroutine01.h"
 
 int Console::run()
@@ -19,7 +20,8 @@ int Console::run()
 //    Concept01::call();
 //    Concept02::call();
 //    Variant01::call();
-   Variant02::call();
+//    Variant02::call();
+   Variant03::call();
 //    TypeErasure::call();
 //    Coroutine01::call();
 
