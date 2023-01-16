@@ -11,8 +11,10 @@ set(SOURCE_FILES
     console.h
     main.cpp
     repo.h
+    values01.h
     variant01.h
     variant02.h
+    variant03.h
 )
 
 add_executable(cpp_20 ${SOURCE_FILES})
