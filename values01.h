@@ -2,29 +2,38 @@
 
 #include "common.h"
 
-namespace Values01 
+namespace Values01
 {
     struct Copyable
     {
-        Copyable() { print("ctor\n"); }
+        Copyable(int v) : m(v) { print("ctor {}\n", m); }
+
+        // Copyable(const Copyable&) = delete;
+        // Copyable& operator=(const Copyable&) = delete;
+
+        // Copyable(Copyable &&) = delete;
+        // Copyable& operator=(Copyable &&) = delete;
+
         ~Copyable() { print("dtor\n"); }
+        int m{};
     };
 
     auto create() -> std::optional<Copyable>
     {
-        Copyable c;
+        std::optional<Copyable> c;
+        // Copyable c{42};
+        // c.m = 3;
         return c;
+        // return {42};
     }
 
-
-   void call()
-   {
-        if (auto value = create())
+    void call()
+    {
+        if (auto opt = create())
         {
-            print("...\n");
+            print("...{}\n", opt.value().m);
         }
-        
 
         print("Values 01\n");
-   }
+    }
 }
