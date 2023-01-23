@@ -4,7 +4,7 @@
 
 namespace Variant03 
 {
-   struct Manager
+   struct KeyValueStore
    {
       bool exists(std::string ident) const
       {
@@ -12,7 +12,7 @@ namespace Variant03
       }
 
       template <typename T>
-      std::optional<T> getValue(std::string ident) const
+      auto getValue(std::string ident) const -> std::optional<T>
       {
          if (!exists(ident))
          {
@@ -35,7 +35,6 @@ namespace Variant03
          m_map[ident] = value;
       }
 
-
    private:
       using Parameter = std::variant<bool, int, std::string>;
       std::unordered_map<std::string, Parameter> m_map {{
@@ -45,33 +44,27 @@ namespace Variant03
       }};
    };
 
-
    void call()
    {
-      Manager manager{};
+      KeyValueStore store{};
 
-      manager.store<int>("test1", 4711);
-      manager.store<bool>("test2", true);
-      manager.store<std::string>("test3", "hello");
+      store.store<int>("test1", 4711);
+      store.store<bool>("test2", true);
+      store.store<std::string>("test3", "hello");
 
-      if (auto opt = manager.getValue<bool>("test1"))
+      if (auto opt = store.getValue<bool>("test1"))
       {
          print("Param1 is: {}\n", opt.value());
       } 
       
-      if (auto opt = manager.getValue<int>("test2"))
+      if (auto opt = store.getValue<int>("test2"))
       {
          print("Param2 is: {}\n", opt.value());
       } 
       
-      if (auto opt = manager.getValue<std::string>("test3"))
+      if (auto opt = store.getValue<std::string>("test3"))
       {
          print("Param3 is: {}\n", opt.value());
       } 
-      
-      // else
-      // {
-      //    print("No Param1\n");
-      // }      
    }
 }
