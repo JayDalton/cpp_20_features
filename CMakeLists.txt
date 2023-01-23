@@ -9,6 +9,7 @@ set(SOURCE_FILES
     common.h
     console.cpp
     console.h
+    future01.h
     main.cpp
     repo.h
     values01.h

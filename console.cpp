@@ -1,5 +1,6 @@
 #include "console.h"
 
+#include "future01.h"
 #include "concept01.h"
 #include "concept02.h"
 #include "values01.h"
@@ -18,9 +19,10 @@ int Console::run()
     // print("Select area...\n");
     // m_repo.printContentList();
 
+   Future01::call();
 //    Concept01::call();
 //    Concept02::call();
-   Values01::call();
+//    Values01::call();
 //    Variant01::call();
 //    Variant02::call();
 //    Variant03::call();
