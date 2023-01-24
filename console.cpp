@@ -22,7 +22,7 @@ int Console::run()
    Future01::call();
 //    Concept01::call();
 //    Concept02::call();
-//    Values01::call();
+   Values01::call();
 //    Variant01::call();
 //    Variant02::call();
 //    Variant03::call();

@@ -27,8 +27,33 @@ namespace Values01
         // return {42};
     }
 
+    template<typename T>
+    void printLines(std::initializer_list<T> list)
+    {
+        for (auto &&elem : list)
+        {
+            print("elem: {}\n", elem);
+        }        
+    }
+
+    void printString(std::string_view view)
+    {
+        print("view: {}\n", view);
+    }
+
+
     void call()
     {
+        printLines({"eens", "zwoa", "drou", "voio"});
+
+        std::string str{"string"};
+        printString(str);
+
+        std::string_view view{"view"};
+        printString(view);
+
+        printString("test");
+
         if (auto opt = create())
         {
             print("...{}\n", opt.value().m);
