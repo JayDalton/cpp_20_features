@@ -41,9 +41,11 @@ namespace Values01
         print("view: {}\n", view);
     }
 
-
     void call()
     {
+        constexpr auto message{"Hello World"};
+        printLines({message});
+
         printLines({"eens", "zwoa", "drou", "voio"});
 
         std::string str{"string"};
