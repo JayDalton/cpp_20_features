@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(SOURCE_FILES 
     common.h
+    concept01.h
+    concept02.h
+    concept03.h
     console.cpp
     console.h
     future01.h

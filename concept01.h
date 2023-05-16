@@ -82,6 +82,8 @@ namespace Concept01 {
 
    void call()
    {
+      print("concept 01\n");
+
       dyn_derived dd;
       dd.do_work();
 
@@ -125,6 +127,8 @@ namespace TypeErasure
 
    void call()
    {
+      print("concept 01\n");
+
       struct Cow {
          void speak() const { print("Mooo\n"); }
       };

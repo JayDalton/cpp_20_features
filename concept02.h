@@ -146,8 +146,8 @@ namespace Concept02 {
 
    void call()
    {
-      auto file = fopen("", OpenMode::normal);
-      print("concept 02");
+      print("concept 02\n");
+      // auto file = fopen("", OpenMode::normal);
 
       Foo foo{};
       func(foo);
